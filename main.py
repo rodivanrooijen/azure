@@ -14,7 +14,3 @@ async def greet(name: str = Form(...)):
     greeting = f"Hello, {name}!"
     return templates.TemplateResponse("greet.html", {"request": {}, "greeting": greeting})
 
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="127.0.0.1", port=8000)
